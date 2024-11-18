@@ -856,7 +856,7 @@ TEST(Dictionary, WriteVectorOfStrings) {
  * MessagePack only has two types for integers (signed and unsigned).
  *
  * See also https://github.com/stephane-caron/palimpsest/pull/6 and
- * https://github.com/upkie/vulp/issues/96
+ * https://github.com/stephane-caron/vulp/issues/96
  */
 #else
 /* This test checks what happens when serializing size_t integers on platforms

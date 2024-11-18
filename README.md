@@ -121,9 +121,9 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "palimpsest",
-    sha256 = "f3f7c004197ce808f44a3698928d48a317f9b6f11b29397d0b8c0c6f2a7d0c1c",
-    strip_prefix = "palimpsest-1.1.0",
-    url = "https://github.com/stephane-caron/palimpsest/archive/refs/tags/v1.1.0.tar.gz",
+    sha256 = "d998b4e195ef75e558f0477da85ffd1961fb2a5b9ad1bafa1a378b6fa8931505",
+    strip_prefix = "palimpsest-2.2.1",
+    url = "https://github.com/stephane-caron/palimpsest/archive/refs/tags/v2.2.1.tar.gz",
 )
 
 load("@palimpsest//tools/workspace:default.bzl", add_palimpsest_repositories = "add_default_repositories")
@@ -132,7 +132,15 @@ load("@palimpsest//tools/workspace:default.bzl", add_palimpsest_repositories = "
 add_palimpsest_repositories()
 ```
 
-You can then use the ``@palimpsest`` dependency in your C++ targets.
+You can then build C++ targets that depend on ``@palimpsest``:
+
+```python
+cc_binary(
+    name = "my-target",
+    srcs = ["my-target.cpp"],
+    deps = ["@palimpsest"],
+)
+```
 
 ### CMake
 
