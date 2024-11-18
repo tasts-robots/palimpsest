@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.2.1] - 2024/11/18
+
 ### Added
 
 - docs: Add a Makefile for local use
@@ -78,7 +80,8 @@ All notable changes to this project will be documented in this file.
 
 This is the initial release of _palimpsest_, a small C++ library that provides a ``Dictionary`` type meant for fast value updates and serialization. It is called palimpsest because these dictionaries are designed for frequent rewritings (values change fast) on the same support (keys change slow).
 
-[unreleased]: https://github.com/qpsolvers/qpsolvers/compare/v2.2.0...HEAD
+[unreleased]: https://github.com/qpsolvers/qpsolvers/compare/v2.2.1...HEAD
+[2.2.1]: https://github.com/qpsolvers/qpsolvers/compare/v2.2.0...v2.2.1
 [2.2.0]: https://github.com/qpsolvers/qpsolvers/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/qpsolvers/qpsolvers/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/qpsolvers/qpsolvers/compare/v1.1.0...v2.0.0
