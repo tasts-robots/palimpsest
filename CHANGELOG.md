@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- docs: Add a Makefile for local use
+
+### Changed
+
+- CICD: Update documentation workflow
+
 ## [2.2.0] - 2024/08/08
 
 ### Added
