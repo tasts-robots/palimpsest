@@ -6,7 +6,7 @@
 ![C++ version](https://img.shields.io/badge/C++-17/20-blue.svg?style=flat)
 [![Release](https://img.shields.io/github/v/release/stephane-caron/palimpsest.svg?sort=semver)](https://github.com/stephane-caron/palimpsest/releases)
 
-_palimpsest_ implements a ``Dictionary`` type for C++ meant for fast value updates and serialization. It is called [palimpsest](https://en.wiktionary.org/wiki/palimpsest#Noun) because dictionaries are designed for frequent rewritings (values change fast) on the same support (keys change slow).
+_palimpsest_ implements a `Dictionary` type for C++ meant for fast value updates and serialization. It is called [palimpsest](https://en.wiktionary.org/wiki/palimpsest#Noun) because dictionaries are designed for frequent rewritings (values change fast) on the same support (keys change slow).
 
 ## Example
 
@@ -61,9 +61,9 @@ Dictionaries can also be [serialized to bytes](#serialization-to-bytes) for tran
 
 ## Link with Python dictionaries
 
-_palimpsest_ will feel familiar if you are used to Python dictionaries, as its API is a subset of Python's ``dict``:
+_palimpsest_ will feel familiar if you are used to Python dictionaries, as its API is a subset of Python's `dict`:
 
-| Python ``dict`` | In _palimpsest_? |
+| Python `dict` | In _palimpsest_? |
 |-----------------|------------------|
 | `clear`         | ✔️  |
 | `copy`          | ✖️  |
@@ -114,7 +114,7 @@ Check out the existing [alternatives](https://github.com/stephane-caron/palimpse
 
 ### Bazel
 
-Add the following to your ``WORKSPACE`` file:
+Add the following to your `WORKSPACE` file:
 
 ```python
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
@@ -151,7 +151,7 @@ make -j4
 make install
 ```
 
-Note that by default [MPack](https://github.com/ludocode/mpack) will be built and installed from the [``third_party``](https://github.com/stephane-caron/palimpsest/tree/main/third_party) folder. Set ``-DBUILD_MPACK=OFF`` if you already have MPack 1.1 or later installed on your system.
+Note that by default [MPack](https://github.com/ludocode/mpack) will be built and installed from the [``third_party``](https://github.com/stephane-caron/palimpsest/tree/main/third_party) folder. Set `-DBUILD_MPACK=OFF` if you already have MPack 1.1 or later installed on your system.
 
 ## Usage
 
@@ -192,17 +192,17 @@ size_t size = bar.serialize(buffer);
 foo.update(buffer.data(), size);  // no effect
 ```
 
-Updates therefore behave complementarily to extensions: updating ``{"a": 12}`` with ``{"a": 42, "b": 1}`` results in ``{"a": 42}`` rather than ``{"a": 12, "b": 1}``.
+Updates therefore behave complementarily to extensions: updating `{"a": 12}` with `{"a": 42, "b": 1}` results in `{"a": 42}` rather than `{"a": 12, "b": 1}`.
 
 ### Adding custom types
 
 Adding a new custom type boils down to the following steps:
 
-* Add implicit type conversions to ``Dictionary.h``
-* Add a read function specialization to ``mpack/read.h``
-* Add a write function specialization to ``mpack/Writer.h``
-* Add a write function specialization to ``mpack/write.h``
-* Add a write function specialization to ``json/write.h``
+* Add implicit type conversions to `Dictionary.h`
+* Add a read function specialization to `mpack/read.h`
+* Add a write function specialization to `mpack/Writer.h`
+* Add a write function specialization to `mpack/write.h`
+* Add a write function specialization to `json/write.h`
 
 Take a look at the existing types in these files and in unit tests for inspiration.
 
@@ -210,7 +210,7 @@ Take a look at the existing types in these files and in unit tests for inspirati
 
 > Why isn't _palimpsest_ also distributed as a header-only library?
 
-The main blocker is that we set a custom flush function ``mpack_std_vector_writer_flush`` to our internal MPack writers. The [MPack Write API](https://ludocode.github.io/mpack/group__writer.html) requires a function pointer for that, and we define that function in [`Writer.cpp`](src/mpack/Writer.cpp). Open a PR if you have ideas to go around that!
+The main blocker is that we set a custom flush function `mpack_std_vector_writer_flush` to our internal MPack writers. The [MPack Write API](https://ludocode.github.io/mpack/group__writer.html) requires a function pointer for that, and we define that function in [`Writer.cpp`](src/mpack/Writer.cpp). Open a PR if you have ideas to go around that!
 
 ## Alternatives
 
