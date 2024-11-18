@@ -855,7 +855,7 @@ TEST(Dictionary, WriteVectorOfStrings) {
  * dictionaries. They would be deserialized as unsigned integers anyway, as
  * MessagePack only has two types for integers (signed and unsigned).
  *
- * See also https://github.com/upkie/palimpsest/pull/6 and
+ * See also https://github.com/stephane-caron/palimpsest/pull/6 and
  * https://github.com/upkie/vulp/issues/96
  */
 #else
