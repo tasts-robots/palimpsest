@@ -63,21 +63,21 @@ Dictionaries can also be [serialized to bytes](#serialization-to-bytes) for tran
 
 _palimpsest_ will feel familiar if you are used to Python dictionaries, as its API is a subset of Python's `dict`:
 
-| Python `dict` | In _palimpsest_? |
-|-----------------|------------------|
-| `clear`         | ✔️  |
-| `copy`          | ✖️  |
-| `fromkeys`      | ✖️  |
-| `get`           | ✔️  |
-| `items`         | ✖️  |
-| `keys`          | ✔️  |
-| `pop`           | ✖️  |
-| `popitem`       | ✖️  |
-| `setdefault`    | ✖️  |
-| `update`        | ✔️  |
-| `values`        | ✔️  |
+| Python `dict` | In _palimpsest_ |
+|---------------|------------------|
+| `clear`       | [`clear`](https://stephane-caron.github.io/palimpsest/classpalimpsest_1_1Dictionary.html#ae98a88dd6a1c5e5afa84f719189882d9) |
+| `copy`        | ✖️  |
+| `fromkeys`    | ✖️  |
+| `get`         | [`get`](https://stephane-caron.github.io/palimpsest/classpalimpsest_1_1Dictionary.html#a74bd56b0ec9e4219f54430bcb6f9a084) |
+| `items`       | ✖️  |
+| `keys`        | [`keys`](https://stephane-caron.github.io/palimpsest/classpalimpsest_1_1Dictionary.html#abb1589b67dbeadec8774833921644798)  |
+| `pop`         | ✖️  |
+| `popitem`     | ✖️  |
+| `setdefault`  | ✖️  |
+| `update`      | [`update`](https://stephane-caron.github.io/palimpsest/classpalimpsest_1_1Dictionary.html#a1b5bb02bcf813b05aef280f47b25ce80) |
+| `values`      | ✖️  |
 
-Implementing one of the functions marked with a ✖️  is a great way to [contribute](CONTRIBUTING.md) to this project.
+Implementing one of the missing functions is a great way to [contribute](CONTRIBUTING.md) to this project.
 
 Code in the [examples/](https://github.com/stephane-caron/palimpsest/tree/main/examples) directory shows how to save and load dictionaries to and from C++ and Python.
 
