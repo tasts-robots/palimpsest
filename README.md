@@ -57,14 +57,14 @@ world_bis.read("world.mpack");
 std::cout << world_bis << std::endl;
 ```
 
-Dictionaries can also be [serialized to bytes](#serialization-to-bytes) for transmission over TCP, memory-mapped files, telegraph lines, etc.
+Dictionaries can also be [serialized to bytes](#serialization-to-bytes) for transmission over TCP, memory-mapped files, telegraph lines, etc. Code in the [examples](https://github.com/stephane-caron/palimpsest/tree/main/examples) directory shows how to save and load dictionaries to and from C++ and Python.
 
 ## Link with Python dictionaries
 
 _palimpsest_ will feel familiar if you are used to Python dictionaries, as its API is a subset of Python's `dict`:
 
-| Python `dict` | In _palimpsest_ |
-|---------------|------------------|
+| Python `dict` | _palimpsest_ `Dictionary` |
+|---------------|---------------------------|
 | `clear`       | [`clear`](https://stephane-caron.github.io/palimpsest/classpalimpsest_1_1Dictionary.html#ae98a88dd6a1c5e5afa84f719189882d9) |
 | `copy`        | ✖️  |
 | `fromkeys`    | ✖️  |
@@ -78,8 +78,6 @@ _palimpsest_ will feel familiar if you are used to Python dictionaries, as its A
 | `values`      | ✖️  |
 
 Implementing one of the missing functions is a great way to [contribute](CONTRIBUTING.md) to this project.
-
-Code in the [examples/](https://github.com/stephane-caron/palimpsest/tree/main/examples) directory shows how to save and load dictionaries to and from C++ and Python.
 
 ## Features and non-features
 
